@@ -3,7 +3,7 @@
 ==============================
 
 Text summarizing your project.
-
+This R script loads 26 years of hummingbird intake records (6,908 birds, 12 columns) from three California rehabilitation centers, inspects the data's structure, and draws a reproducible random sample of 5,000 birds using `set.seed()`. Its main features are the tidyverse tools: `dplyr` summarises counts and survival proportions by center, variable and species group, and `ggplot2` visualises them as bar charts and faceted panels. The script also converts the `Admitted` text column to a real date with `as.Date()` and its `format` argument, builds a `Species_group` variable, and checks for data problems such as duplicates, uneven reporting across centers and years, and inconsistent values. For outputs, it saves the sampled dataset as a CSV (with `row.names = FALSE`), saves a 4 × 3 inch PDF plot of birds admitted per center, and prints summary tables and plots of survival by variable, center and species group, alongside a chi-square test to check whether associations are more than chance. Overall, the analysis asks which birds are released versus die, and it uses proportions rather than raw counts, cleaned copies of the data and a fixed seed so that the comparisons are fair and the results are reproducible.
 ## Project Organization
 ------------
 
